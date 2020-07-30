@@ -74,7 +74,7 @@ julia> tags = Dict(1 => "料理", 3 => "眺望", 5 => "料金", 6 => "接客", .
 ```julia
 julia> include("Tagger.jl")
 julia> using Main.Tagger
-julia> Tagger.set_params(model_params["Φ_"], model_params["corpus"], tags)
+julia> Tagger.set_params(model_params, tags)
 ```
 
 口コミ文のタグを推定する

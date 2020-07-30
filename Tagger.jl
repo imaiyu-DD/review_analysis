@@ -10,8 +10,8 @@ struct model_params
     tags::Dict{Int64,String}
 end
 
-function set_params(Φ_::Array, corpus::Vector, tags::Dict)
-    global params = model_params(Mecab("-d/usr/local/lib/mecab/dic/mecab-ipadic-neologd"), Φ_, corpus, tags)
+function set_params(model::Dict, tags::Dict)
+    global params = model_params(Mecab("-d/usr/local/lib/mecab/dic/mecab-ipadic-neologd"), model["Φ_"], model["corpus"], tags)
 end
 
 function tagging(doc::String; ɛ::Float64=0.05, debug=false)
