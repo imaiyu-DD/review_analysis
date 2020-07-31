@@ -8,8 +8,8 @@ julia version 1.0.5
 ```julia
 julia> using Pkg
 julia> Pkg.installed()
-"StatsBase"        => v"0.33.0"
-"MeCab"            => v"0.2.0"
+"StatsBase" => v"0.33.0"
+"MeCab"     => v"0.2.0"
 ```
 
 MeCab辞書: `/usr/local/lib/mecab/dic/mecab-ipadic-neologd`
