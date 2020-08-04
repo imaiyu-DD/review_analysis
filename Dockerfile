@@ -7,10 +7,7 @@ RUN apt-get -y update && \
 
 RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git && \
     cd mecab-ipadic-neologd && \
-    ./bin/install-mecab-ipadic-neologd -n -y
-
-RUN mkdir -p /usr/local/lib/mecab/dic/ && \
-    ln -s /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd /usr/local/lib/mecab/dic/mecab-ipadic-neologd
+    ./bin/install-mecab-ipadic-neologd -n -y --prefix /usr/local/lib/mecab/dic/mecab-ipadic-neologd
 
 RUN git clone https://github.com/imaiyu-DD/review_analysis.git
 RUN julia -e 'using Pkg; Pkg.add("StatsBase"); Pkg.add("MeCab")'
